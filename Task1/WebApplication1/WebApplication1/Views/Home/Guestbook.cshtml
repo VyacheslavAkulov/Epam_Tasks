@@ -1,0 +1,29 @@
+﻿@model IEnumerable<WebApplication1.Models.Review>
+@using WebApplication1.Models
+@{
+    ViewBag.Title = "Guestbook";
+}
+<h2>Отзывы</h2>
+<div>
+    <table border="0">
+        <tr class="header">
+            <td><p>Номер  </p></td>
+            <td><p>Автор  </p></td>
+            <td><p>Дата  </p></td>
+            <td><p>Текст отзыва  </p></td>
+            <td></td>
+        </tr>
+        @foreach (WebApplication1.Models.Review b in Model)
+            {
+            <tr>
+                <td><p>@b.Id  </p></td>
+                <td><p>@b.Author  </p></td>
+                <td><p>@b.Date  </p></td>
+                <td><pre>@b.Text  <br /></pre></td>
+            </tr>
+            
+        }
+    </table>
+</div>
+<br/>
+@Html.Partial("GuestbookPartial",new Review())
