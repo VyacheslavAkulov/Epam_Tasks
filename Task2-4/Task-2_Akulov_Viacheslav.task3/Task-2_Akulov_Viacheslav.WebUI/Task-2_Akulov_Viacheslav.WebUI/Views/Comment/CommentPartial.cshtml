@@ -1,0 +1,17 @@
+﻿@model Task_2_Akulov_Viacheslav.WebUI.Models.CommentViewModel
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    
+        @Html.LabelFor(model => model.Name, "Ваще имя")
+        <br />
+        @Html.EditorFor(model => model.Name)
+        <br /><br />
+        @Html.LabelFor(model => model.Text, "Текст статьи")
+        <br />
+        @Html.EditorFor(model => model.Text)
+        <br /><br />
+
+        <input type="submit" value="Отправить" />
+    
+}

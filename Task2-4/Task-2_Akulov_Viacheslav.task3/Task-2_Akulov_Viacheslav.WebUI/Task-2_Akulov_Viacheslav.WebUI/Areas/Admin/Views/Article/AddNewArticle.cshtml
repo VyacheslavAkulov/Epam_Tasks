@@ -1,0 +1,27 @@
+﻿@model Task_2_Akulov_Viacheslav.Models.Article
+
+
+<h2>Add new article</h2>
+
+@using (Html.BeginForm())
+{
+    Html.HiddenFor(model => model.Date);
+
+    @Html.LabelFor(model => model.Name, "Название")
+    <br />
+    @Html.EditorFor(model => model.Name)
+    <br /><br />
+    @Html.LabelFor(model => model.Text, "Текст статьи")
+    <br />
+    @Html.EditorFor(model => model.Text)
+    <br /><br />
+    @Html.LabelFor(model => model.Tags, "Тэги")
+    <br />
+    @Html.Partial("Tags", (IEnumerable<Task_2_Akulov_Viacheslav.Model.Models.Tag>)ViewBag.Tags)
+    <br /><br />
+    <input type="submit" value="Отправить" />
+}
+<br />
+<div>
+    @Html.ActionLink("Back to List", "ViewArticles")
+</div>

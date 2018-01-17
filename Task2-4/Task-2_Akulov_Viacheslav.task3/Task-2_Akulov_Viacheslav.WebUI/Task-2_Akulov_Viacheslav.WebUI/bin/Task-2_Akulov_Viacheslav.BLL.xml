@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task-2_Akulov_Viacheslav.BLL</name>
+    </assembly>
+    <members>
+        <member name="T:Task_2_Akulov_Viacheslav.BLL.Infrastructure.ServiceModule">
+            <summary>
+            Dependency injection module
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Infrastructure.ServiceModule.#ctor(System.String)">
+            <summary>
+            Connection string name
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Infrastructure.ServiceModule.Load">
+            <summary>
+            Dependency injection beetwen IUnitOfWork and DbContextUnitOfWork
+            </summary>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.BLL.Infrastructure.ValidationException">
+            <summary>
+            Validate model exceptions
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.BLL.Infrastructure.ValidationException.Property">
+            <summary>
+            The name of the model property that is incorrect and does not pass validation
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Infrastructure.ValidationException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new exception object
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="prop">The name of the model property that is incorrect and does not pass validation</param>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.BLL.Interfaces.IService`1">
+            <summary>
+            Service interface
+            </summary>
+            <typeparam name="T">Entity</typeparam>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Interfaces.IService`1.Get(System.Nullable{System.Int32})">
+            <summary>
+            Get Element by id
+            </summary>
+            <param name="id">Element id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Interfaces.IService`1.GetAll">
+            <summary>
+            Get all entity objects to be sent to the view
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Interfaces.IService`1.Add(`0)">
+            <summary>
+            Adding a new item received from a view
+            </summary>
+            <param name="modelDTO">Entity object</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Interfaces.IService`1.Validate(`0)">
+            <summary>
+            Model validation
+            </summary>
+            <param name="modelDTO">Validation object</param>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.BLL.Interfaces.ISiteService">
+            <summary>
+            Providing access to services
+            Defining the general context for services
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.BLL.Interfaces.ISiteService.Articles">
+            <summary>
+            Providing access to Article service
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.BLL.Interfaces.ISiteService.Comments">
+            <summary>
+            Providing access to Comment service
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.BLL.Interfaces.ISiteService.UserForms">
+            <summary>
+            Providing access to UserForm service
+            </summary>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.BLL.Services.ArticleService">
+            <summary>
+            Interaction between the database layer and the view layer for the entity Article
+            Implementing a communication service
+            </summary>
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.BLL.Services.ArticleService.Database">
+            <summary>
+            Database object
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.ArticleService.#ctor(Task_2_Akulov_Viacheslav.DAL.Interfaces.IUnitOfWork)">
+            <summary>
+            Initializing the database
+            </summary>
+            <param name="database"></param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.ArticleService.Validate(Task_2_Akulov_Viacheslav.Models.Article)">
+            <summary>
+            Model validation
+            </summary>
+            <param name="modelDTO">Validation object</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.ArticleService.Task_2_Akulov_Viacheslav#BLL#Interfaces#IService{Task_2_Akulov_Viacheslav#Models#Article}#Add(Task_2_Akulov_Viacheslav.Models.Article)">
+            <summary>
+            Adding a new item
+            </summary>
+            <param name="modelDTO"> Adding item</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.ArticleService.Task_2_Akulov_Viacheslav#BLL#Interfaces#IService{Task_2_Akulov_Viacheslav#Models#Article}#GetAll">
+            <summary>
+            Getting all objects of this entity in the database
+            </summary>
+            <returns>List of all objects</returns>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.BLL.Services.CommentService">
+            <summary>
+            Interaction between the database layer and the view layer for the entity Comment
+            Implementing a communication service
+            </summary>
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.BLL.Services.CommentService.Database">
+            <summary>
+            Database object
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.CommentService.#ctor(Task_2_Akulov_Viacheslav.DAL.Interfaces.IUnitOfWork)">
+            <summary>
+            Initializing the database
+            </summary>
+            <param name="database"></param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.CommentService.Validate(Task_2_Akulov_Viacheslav.Models.Comment)">
+            <summary>
+            Model validation
+            </summary>
+            <param name="modelDTO">Validation object</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.CommentService.Task_2_Akulov_Viacheslav#BLL#Interfaces#IService{Task_2_Akulov_Viacheslav#Models#Comment}#Add(Task_2_Akulov_Viacheslav.Models.Comment)">
+            <summary>
+            Adding a new item
+            </summary>
+            <param name="modelDTO"> Adding item</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.CommentService.Task_2_Akulov_Viacheslav#BLL#Interfaces#IService{Task_2_Akulov_Viacheslav#Models#Comment}#GetAll">
+            <summary>
+            Getting all objects of this entity in the database
+            </summary>
+            <returns>List of all objects</returns>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.BLL.Services.SiteService">
+            <summary>
+             Interaction between the database layer and the view layer for the entities
+             Implementing a communication service
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.BLL.Services.SiteService.Database">
+            <summary>
+            Database provider
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.SiteService.#ctor(Task_2_Akulov_Viacheslav.DAL.Interfaces.IUnitOfWork)">
+            <summary>
+            Database initialization
+            </summary>
+            <param name="database">Database provider</param>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.BLL.Services.SiteService.Articles">
+            <summary>
+            Getter for Article service
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.BLL.Services.SiteService.Comments">
+            <summary>
+            Getter for Comment service
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.BLL.Services.SiteService.UserForms">
+            <summary>
+            Getter for UserForm service
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.SiteService.Dispose">
+            <summary>
+            Dispose resources
+            </summary>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.BLL.Services.UserFormService">
+            <summary>
+            Interaction between the database layer and the view layer for the entity UserForm
+            Implementing a communication service
+            </summary>
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.BLL.Services.UserFormService.Database">
+            <summary>
+            Database object
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.UserFormService.#ctor(Task_2_Akulov_Viacheslav.DAL.Interfaces.IUnitOfWork)">
+            <summary>
+            Initializing the database
+            </summary>
+            <param name="database"></param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.UserFormService.Validate(Task_2_Akulov_Viacheslav.Models.UserForm)">
+            <summary>
+            Model validation
+            </summary>
+            <param name="modelDTO">Validation object</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.UserFormService.Task_2_Akulov_Viacheslav#BLL#Interfaces#IService{Task_2_Akulov_Viacheslav#Models#UserForm}#Add(Task_2_Akulov_Viacheslav.Models.UserForm)">
+            <summary>
+            Adding a new item
+            </summary>
+            <param name="modelDTO"> Adding item</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.BLL.Services.UserFormService.Task_2_Akulov_Viacheslav#BLL#Interfaces#IService{Task_2_Akulov_Viacheslav#Models#UserForm}#GetAll">
+            <summary>
+            Getting all objects of this entity in the database
+            </summary>
+            <returns>List of all objects</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Task_2_Akulov_Viacheslav.Model.Models.Tag>
+@using Task_2_Akulov_Viacheslav.Model.Models
+
+<select multiple id="Tags" name="Tags">
+
+    @foreach (Tag tag in Model)
+    {
+        <option>
+            @tag.Name
+        </option>
+    }
+</select>

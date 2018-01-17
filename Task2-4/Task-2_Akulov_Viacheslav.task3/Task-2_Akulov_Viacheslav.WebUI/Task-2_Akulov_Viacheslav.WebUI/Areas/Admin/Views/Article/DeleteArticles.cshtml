@@ -1,0 +1,29 @@
+﻿@model Task_2_Akulov_Viacheslav.Models.Article
+<br />
+<div>
+    <div>
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div>
+        @Html.DisplayFor(model => model.Date)
+    </div>
+
+    @if (Model.Text.Length > 100)
+    {
+        <div>@Model.Text.Remove(100)</div>
+    }
+    else
+    {
+        <div>@Model.Text</div>
+    }
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.Id);
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    }
+</div>

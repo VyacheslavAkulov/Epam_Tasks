@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Task_2_Akulov_Viacheslav.Models.Article>
+@{
+    ViewBag.Title = "Main page";
+}
+<body>
+    @section Quiz
+    {
+        @using (Html.BeginForm())
+        {
+            <br />
+            <br />
+            <br />
+            if (Request.HttpMethod == "GET")
+            {
+                @Html.Label("Вы любите котиков?")
+                <br />
+                @Html.RadioButton("Love", true,true)
+                <span>Нет</span> <br />
+                @Html.RadioButton("Love", false)
+                <span>Да</span> <br />
+                <input type="submit" value="Отправить" />}
+            else
+            {
+                if (ViewBag.Love)
+                {
+                    <p>а такого?</p>
+                    <img height="200" width="200" src="~/Content/1485343553278045224.jpg" alt="Girl Image" />
+                }
+                else
+                {
+                    <p>Лови котика:3</p>
+                    <img height="200" width="200" src="~/Content/AwCpoIl7f68.jpg" alt="Cat Image" />
+                }
+
+            }
+        }
+    }
+    <div>
+        <h2>Статья</h2>
+        <table border="0">
+            <tr class="header">
+                <td><p>Название  </p></td>
+                <td><p>Дата  </p></td>
+                <td><p>Текст статьи  </p></td>
+                <td></td>
+            </tr>
+            @foreach (Task_2_Akulov_Viacheslav.Models.Article b in Model)
+            {
+                <tr>
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.Date</p></td>
+                    @if (b.Text.Length > 200)
+                    {
+                        <td><p>@b.Text.Remove(200) </p>@Html.ActionLink(" more...", "ArticleInfo/" + b.Id, "Article")</td>
+                    }
+                    else
+                    {
+                        <td><p>@b.Text </p> @Html.ActionLink(" more...", "ArticleInfo/"+ b.Id, "Article")</td>
+                    }
+
+                </tr>
+            }
+        </table>
+    </div>
+
+
+</body>
+

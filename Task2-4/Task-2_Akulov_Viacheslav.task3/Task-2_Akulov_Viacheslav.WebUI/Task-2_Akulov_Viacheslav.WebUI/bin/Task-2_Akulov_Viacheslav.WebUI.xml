@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task-2_Akulov_Viacheslav.WebUI</name>
+    </assembly>
+    <members>
+        <member name="F:Task_2_Akulov_Viacheslav.WebUI.Areas.Admin.Controllers.ArticleController.siteService">
+            <summary>
+            Service to work with Database
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Areas.Admin.Controllers.ArticleController.#ctor(Task_2_Akulov_Viacheslav.BLL.Interfaces.ISiteService)">
+            <summary>
+            Initialize Database service
+            </summary>
+            <param name="siteService">Database service</param>
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.WebUI.Controllers.ArticleController.siteService">
+            <summary>
+            Service to work with Database
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Controllers.ArticleController.#ctor(Task_2_Akulov_Viacheslav.BLL.Interfaces.ISiteService)">
+            <summary>
+            Initialize Database service
+            </summary>
+            <param name="siteService">Database service</param>
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.WebUI.Controllers.CommentController.siteService">
+            <summary>
+            Service to work with Database
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Controllers.CommentController.#ctor(Task_2_Akulov_Viacheslav.BLL.Interfaces.ISiteService)">
+            <summary>
+            Initialize Database service
+            </summary>
+            <param name="siteService">Database service</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Controllers.CommentController.Comment">
+            <summary>
+            Processing get requests to Comment
+            </summary>
+            <returns>Comment page</returns>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Controllers.CommentController.Comment(Task_2_Akulov_Viacheslav.WebUI.Models.CommentViewModel)">
+            <summary>
+            Processing post requests to Comment
+            </summary>
+            <param name="commentViewModel">Added comment</param>
+            <returns>Comments page</returns>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Controllers.CommentController.CommentPartial">
+            <summary>
+             Processing get requests to CommentPartial
+            </summary>
+            <returns>Form for adding a comment</returns>
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.WebUI.Controllers.HomeController.siteService">
+            <summary>
+            Service to work with Database
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Controllers.HomeController.#ctor(Task_2_Akulov_Viacheslav.BLL.Interfaces.ISiteService)">
+            <summary>
+            Initialize Database service
+            </summary>
+            <param name="siteService">Database service</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Controllers.HomeController.Index">
+            <summary>
+            Action that processes requests to the main page
+            </summary>
+            <returns>Page with articles</returns>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Controllers.HomeController.Dispose(System.Boolean)">
+            <summary>
+            Dispose resources
+            </summary>
+            <param name="disposing">
+            true-Resources were disposed
+            false-Resources weren't disposed 
+            </param>
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.WebUI.Controllers.UserFormController.siteService">
+            <summary>
+            Service to work with Database
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Controllers.UserFormController.#ctor(Task_2_Akulov_Viacheslav.BLL.Interfaces.ISiteService)">
+            <summary>
+            Initialize Database service
+            </summary>
+            <param name="siteService">Database service</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Controllers.UserFormController.UserForm(Task_2_Akulov_Viacheslav.Models.UserForm)">
+            <summary>
+            Processing requests to UserForm
+            Adding the user information
+            </summary>
+            <param name="form">Form filled by the user</param>
+            <returns>
+            Get-User input form
+            Post-Page with input information
+            </returns>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Controllers.UserFormController.UserFormComplete">
+            <summary>
+            Processing requests to UserForm
+            </summary>
+            <returns>Page with input information</returns>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.WebUI.Util.SiteModule">
+            <summary>
+            Dependency injection module
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.WebUI.Util.SiteModule.Load">
+            <summary>
+            Dependency injection beetwen ISiteService and SiteService
+            </summary>
+        </member>
+    </members>
+</doc>

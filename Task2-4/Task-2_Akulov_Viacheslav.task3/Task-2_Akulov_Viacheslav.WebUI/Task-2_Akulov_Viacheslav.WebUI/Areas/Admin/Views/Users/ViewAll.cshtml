@@ -1,0 +1,24 @@
+﻿@using Task_2_Akulov_Viacheslav.WebUI.Models
+@model IEnumerable<Task_2_Akulov_Viacheslav.WebUI.Models.ApplicationUser>
+<h2>Список зарегестрированных пользователей</h2>
+<table border="1" style="text-align:center">
+    <thead>
+        <tr>
+            <th>User name</th>
+            <th>Email</th>
+            <th>Programming Language</th>
+        </tr>
+
+    </thead>
+    @foreach (ApplicationUser item in Model)
+    {
+    <tr>
+        <td>@item.UserName</td>
+        <td>@item.Email</td>
+        <td>@item.ProgrammingLanguage</td>
+    </tr>
+    }
+</table>
+
+
+

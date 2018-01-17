@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <header class="navbar navbar-inverse" role="navigation">
+        <img src="~/Content/blog11.jpg" height="50" width="50" />
+        @ViewBag.Title
+        <a name="top" />
+        <div style="float:right;padding-right:5em;padding-top:1em">
+        @Html.ActionLink("Logout", "Logout", new { area = "", controller = "Account" })
+        </div>
+    </header>
+    <section class="row">
+        <div id="categories" style="width:20%; height:1000em; float:left;">
+            <ul>
+                <li>@Html.ActionLink(" View articles", "ViewArticles", "Article")</li>
+                <li>@Html.ActionLink(" Users", "ViewAll", "Users")</li>
+                <li>@Html.ActionLink("Main site link", "Index", new { area = "", controller = "Home" } )</li>
+            </ul>           
+        </div>
+        <div style="width:80%;display:inline">
+            @RenderBody()
+        </div>
+    </section>
+    <footer>
+        <a href="#top">&copy; @DateTime.Now.Year - My ASP.NET Application  To top</a>
+    </footer>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+
+</html>

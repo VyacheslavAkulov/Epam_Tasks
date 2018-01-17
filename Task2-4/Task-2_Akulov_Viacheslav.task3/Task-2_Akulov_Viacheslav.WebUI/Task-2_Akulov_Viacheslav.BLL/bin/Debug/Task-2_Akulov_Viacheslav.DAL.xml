@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task-2_Akulov_Viacheslav.DAL</name>
+    </assembly>
+    <members>
+        <member name="T:Task_2_Akulov_Viacheslav.DAL.DbContexts.SiteContext">
+            <summary>
+            The database context containing all the database entities
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.DAL.DbContexts.SiteContext.Articles">
+            <summary>
+            Articles entity DbSet
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.DAL.DbContexts.SiteContext.Comments">
+            <summary>
+            Comments entity DbSets
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.DAL.DbContexts.SiteContext.UserForms">
+            <summary>
+            UserForms entity DbSet
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.DbContexts.SiteContext.#ctor(System.String)">
+            <summary>
+             Сonnection to the database
+            </summary>
+            <param name="connectionString">Connection string name</param>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.DAL.Interfaces.IRepository`1">
+            <summary>
+            Repository interface
+            </summary>
+            <typeparam name="T">Entity</typeparam>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Interfaces.IRepository`1.Get(System.Int32)">
+            <summary>
+            Gett element by Id
+            </summary>
+            <param name="id">Id Element</param>
+            <returns></returns>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Interfaces.IRepository`1.GetAll">
+            <summary>
+            Get all entity objects
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Interfaces.IRepository`1.Add(`0)">
+            <summary>
+            Adding a new item
+            </summary>
+            <param name="item">Entity object</param>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.DAL.Interfaces.IUnitOfWork">
+            <summary>
+            Providing access to repositories
+            Defining the general context for repositories
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.DAL.Interfaces.IUnitOfWork.Articles">
+            <summary>
+            Getter for Article repository
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.DAL.Interfaces.IUnitOfWork.Comments">
+            <summary>
+            Getter for Comment repository
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.DAL.Interfaces.IUnitOfWork.UserForms">
+            <summary>
+            Getter for UserForm repository
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Interfaces.IUnitOfWork.Save">
+            <summary>
+            Saving database changes
+            </summary>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.DAL.Repositories.ArticleRepository">
+            <summary>
+            Implementing the repository for the essence of the Article
+            </summary>
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.DAL.Repositories.ArticleRepository.db">
+            <summary>
+            Database context
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.ArticleRepository.#ctor(Task_2_Akulov_Viacheslav.DAL.DbContexts.SiteContext)">
+            <summary>
+            Initializing the context of the database
+            </summary>
+            <param name="db">Database context</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.ArticleRepository.Task_2_Akulov_Viacheslav#DAL#Interfaces#IRepository{Task_2_Akulov_Viacheslav#Models#Article}#Add(Task_2_Akulov_Viacheslav.Models.Article)">
+            <summary>
+            Adding an object to the database
+            </summary>
+            <param name="item">Adding object</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.ArticleRepository.Task_2_Akulov_Viacheslav#DAL#Interfaces#IRepository{Task_2_Akulov_Viacheslav#Models#Article}#GetAll">
+            <summary>
+            Getting all objects of this entity in the database
+            </summary>
+            <returns>List of all objects</returns>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.DAL.Repositories.CommentRepository">
+            <summary>
+            Implementing the repository for the essence of the Comment
+            </summary>
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.DAL.Repositories.CommentRepository.db">
+            <summary>
+            Database context
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.CommentRepository.#ctor(Task_2_Akulov_Viacheslav.DAL.DbContexts.SiteContext)">
+            <summary>
+            Initializing the context of the database
+            </summary>
+            <param name="db">Database context</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.CommentRepository.Task_2_Akulov_Viacheslav#DAL#Interfaces#IRepository{Task_2_Akulov_Viacheslav#Models#Comment}#Add(Task_2_Akulov_Viacheslav.Models.Comment)">
+            <summary>
+            Adding an object to the database
+            </summary>
+            <param name="item">Adding object</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.CommentRepository.Task_2_Akulov_Viacheslav#DAL#Interfaces#IRepository{Task_2_Akulov_Viacheslav#Models#Comment}#GetAll">
+            <summary>
+            Getting all objects of this entity in the database
+            </summary>
+            <returns>List of all objects</returns>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.DAL.Repositories.DbContextUnitOfWork">
+            <summary>
+            Class to work with the entities of database
+            </summary>dependency injection
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.DAL.Repositories.DbContextUnitOfWork.db">
+            <summary>
+            Database context
+            </summary>
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.DAL.Repositories.DbContextUnitOfWork.articleRepository">
+            <summary>
+            Repository objects for database entities
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.DbContextUnitOfWork.#ctor(System.String)">
+            <summary>
+            Database initialization
+            </summary>
+            <param name="connectionString">Connection string name</param>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.DAL.Repositories.DbContextUnitOfWork.Articles">
+            <summary>
+            Getter for Article repository
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.DAL.Repositories.DbContextUnitOfWork.Comments">
+            <summary>
+            Getter for Comment repository
+            </summary>
+        </member>
+        <member name="P:Task_2_Akulov_Viacheslav.DAL.Repositories.DbContextUnitOfWork.UserForms">
+            <summary>
+            Getter for UserForm repository
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.DbContextUnitOfWork.Save">
+            <summary>
+            Saving database changes
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.DbContextUnitOfWork.Dispose(System.Boolean)">
+            <summary>
+            Dispose resources
+            </summary>
+            <param name="disposing">
+            true-Resources were disposed
+            false-Resources weren't disposed 
+            </param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.DbContextUnitOfWork.Dispose">
+            <summary>
+            Dispose resources
+            </summary>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.DAL.Repositories.UserFormRepository">
+            <summary>
+            Implementing the repository for the essence of the UserForm
+            </summary>
+        </member>
+        <member name="F:Task_2_Akulov_Viacheslav.DAL.Repositories.UserFormRepository.db">
+            <summary>
+            Database context
+            </summary>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.UserFormRepository.#ctor(Task_2_Akulov_Viacheslav.DAL.DbContexts.SiteContext)">
+            <summary>
+            Initializing the context of the database
+            </summary>
+            <param name="db">Database context</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.UserFormRepository.Task_2_Akulov_Viacheslav#DAL#Interfaces#IRepository{Task_2_Akulov_Viacheslav#Models#UserForm}#Add(Task_2_Akulov_Viacheslav.Models.UserForm)">
+            <summary>
+            Adding an object to the database
+            </summary>
+            <param name="item">Adding object</param>
+        </member>
+        <member name="M:Task_2_Akulov_Viacheslav.DAL.Repositories.UserFormRepository.Task_2_Akulov_Viacheslav#DAL#Interfaces#IRepository{Task_2_Akulov_Viacheslav#Models#UserForm}#GetAll">
+            <summary>
+            Getting all objects of this entity in the database
+            </summary>
+            <returns>List of all objects</returns>
+        </member>
+    </members>
+</doc>

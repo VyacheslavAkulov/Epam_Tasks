@@ -1,0 +1,61 @@
+﻿@model  Task_2_Akulov_Viacheslav.Models.UserForm
+@using Task_2_Akulov_Viacheslav.Models
+
+@{
+    ViewBag.Title = "UserFormComplete";
+}
+@helper DisplayAncet(UserForm ancet)
+{
+
+    @Html.LabelFor(m => m.Name, "Имя")
+    <br />
+    @Html.DisplayFor(m => m.Name)
+    <br /><br />
+    @Html.LabelFor(m => m.Sex, "Пол")
+    <br />
+if (Model.Sex)
+{
+        @Html.Label("Ж")
+}
+else
+{
+        @Html.Label("М")
+}
+    <br /><br />
+    @Html.LabelFor(m => m.Age, "Возраст")
+    <br />
+    @Html.DisplayFor(m => m.Age)
+    <br /><br />
+    @Html.LabelFor(m => m.Team, "Команда")
+    <br />
+    @Html.DisplayFor(m => m.Team)
+    <br /><br />
+{
+    string pos = "";
+    switch (Model.Position)
+    {
+        case 0: { pos = "Вратарь"; break; }
+        case 1: { pos = "Защитник"; break; }
+        case 2: { pos = "Полузащитник"; break; }
+        case 3: { pos = "Нападающий"; break; }
+    }
+        @Html.LabelFor(m => m.Position, "Позиция")
+        <br />
+        @Html.Label(pos)
+        <br /><br />
+}
+
+    @Html.LabelFor(m => m.Salary, "Зарплата")
+    <br />
+    @Html.DisplayFor(m => m.Salary)
+    <br /><br />
+}
+<body>
+    <div>
+        <h2>Ваша анкета</h2>
+        @DisplayAncet(Model)
+        <br />
+    </div>
+
+
+</body>

@@ -1,0 +1,30 @@
+﻿@model Task_2_Akulov_Viacheslav.Models.Article
+@using Task_2_Akulov_Viacheslav.Model.Models
+@{
+    ViewBag.Title = "ArticleInfo";
+}
+
+<div>
+        <h2>Статья</h2>
+        <table border="0">
+            <tr class="header">
+                <td><p>Название  </p></td>
+                <td><p>Дата  </p></td>
+                <td><p>Текст статьи  </p></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><p>@Model.Id</p></td>
+                <td><p>@Model.Date</p></td>
+                <td><p>@Model.Text</p></td>
+                <td><p>@foreach (Tag item in Model.Tags)
+                {
+                    @item.Name;
+                }</p></td>
+            </tr>
+        </table>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index","Home")
+</p>

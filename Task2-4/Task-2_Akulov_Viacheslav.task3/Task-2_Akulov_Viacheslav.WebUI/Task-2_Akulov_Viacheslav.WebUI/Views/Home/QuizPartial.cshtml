@@ -1,0 +1,16 @@
+﻿@using (Html.BeginForm())
+{
+    if (Request.HttpMethod == "GET")
+    {
+    @Html.Label("Вы любите котиков?")
+    <br />
+    @Html.RadioButton("Love", true, true)
+    <span>Нет</span> <br />
+    @Html.RadioButton("Love", false)
+    <span>Да</span> <br />
+    <input type="submit" value="Отправить" />}
+    else
+    {
+    <img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi_1su_tbzYAhWDK5oKHczbDcYQjRwIBw&url=https%3A%2F%2Fvk.com%2Fkotik_v_shapke&psig=AOvVaw1aFX20NEm1FWUH1r8Ip7i5&ust=1515090315560183" alt="Cat" />
+    }
+}

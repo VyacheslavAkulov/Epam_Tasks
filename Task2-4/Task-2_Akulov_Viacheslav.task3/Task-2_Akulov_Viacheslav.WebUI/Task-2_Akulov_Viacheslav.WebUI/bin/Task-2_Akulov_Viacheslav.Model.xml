@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task-2_Akulov_Viacheslav.Model</name>
+    </assembly>
+    <members>
+        <member name="T:Task_2_Akulov_Viacheslav.Models.Article">
+            <summary>
+            Article entity
+            </summary>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.Models.Comment">
+            <summary>
+            Comment entity
+            </summary>
+        </member>
+        <member name="T:Task_2_Akulov_Viacheslav.Models.UserForm">
+            <summary>
+            UserForm entity
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,49 @@
+﻿@model Task_2_Akulov_Viacheslav.Models.UserForm
+@{
+    ViewBag.Title = "UserForm";
+}
+
+<h2>Ancet</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m=>m.Id)
+
+    @Html.LabelFor(m => m.Name, "Имя")
+    <br />
+    @Html.EditorFor(m => m.Name)
+    <br /><br />
+    @Html.LabelFor(model => model.Age, "Возраст")
+    <br />
+    @Html.EditorFor(m=>m.Age)
+    <br /><br />
+    @Html.LabelFor(model => model.Sex, "Пол")
+    <br />
+    @Html.RadioButton("Sex",true,true)
+    <span>М</span> <br />
+    @Html.RadioButton("Sex",false)
+    <span>Ж</span> <br />
+    <br /><br />
+    @Html.LabelFor(model => Model.Team, "Команда")
+    <br />
+    @Html.EditorFor(model => Model.Team)
+    <br /><br />
+    @Html.LabelFor(model => Model.Position, "Позиция")
+    <br />
+    @Html.RadioButton("Position", 0,true)
+    <span>Вратарь</span> <br />
+    @Html.RadioButton("Position", 1)
+    <span>Защитник</span> <br />
+    @Html.RadioButton("Position", 2)
+    <span>Полузащитник</span> <br />
+    @Html.RadioButton("Position", 3)
+    <span>Нападающий</span> <br />
+    <br /><br />
+    @Html.LabelFor(model => Model.Salary, "Зарплата")
+    <br />
+    @Html.EditorFor(model => model.Salary)
+    <br /><br />
+    <input type="submit" value="Отправить" />
+}
+
+

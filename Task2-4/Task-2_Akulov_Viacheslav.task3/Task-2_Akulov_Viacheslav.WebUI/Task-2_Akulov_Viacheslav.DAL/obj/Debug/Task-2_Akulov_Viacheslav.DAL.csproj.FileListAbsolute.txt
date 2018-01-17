@@ -1,0 +1,15 @@
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\bin\Debug\Task-2_Akulov_Viacheslav.DAL.dll.config
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\bin\Debug\Task-2_Akulov_Viacheslav.DAL.xml
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\bin\Debug\Task-2_Akulov_Viacheslav.DAL.dll
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\bin\Debug\Task-2_Akulov_Viacheslav.DAL.pdb
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\bin\Debug\Task-2_Akulov_Viacheslav.Model.dll
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\bin\Debug\Task-2_Akulov_Viacheslav.Model.pdb
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\bin\Debug\Task-2_Akulov_Viacheslav.Model.xml
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\obj\Debug\Task-2_Akulov_Viacheslav.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\obj\Debug\Task-2_Akulov_Viacheslav.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\obj\Debug\Task-2_Akulov_Viacheslav.DAL.dll
+C:\Users\Viacheslav Akulov\Desktop\Task-2_Akulov_Viacheslav.task3\Task-2_Akulov_Viacheslav.WebUI\Task-2_Akulov_Viacheslav.DAL\obj\Debug\Task-2_Akulov_Viacheslav.DAL.pdb

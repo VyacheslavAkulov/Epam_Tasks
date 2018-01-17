@@ -1,0 +1,14 @@
+﻿@using Task_2_Akulov_Viacheslav.Models
+@model IEnumerable<Task_2_Akulov_Viacheslav.Models.Article>
+
+
+<h2>Редактирование статей</h2>
+@foreach (Article item in Model)
+{
+    Html.RenderPartial("DeleteArticles", item);
+}
+<br/>
+
+@Html.ActionLink("Add new article", "AddNewArticle",new Article())
+
+
