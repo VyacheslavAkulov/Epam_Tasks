@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <header class="navbar navbar-inverse" role="navigation">
+        <img src="~/blog11.jpg" style="height:5em" />
+        @ViewBag.Title 
+        <a  name="top" />
+    </header>
+    <section class="row">        
+        <div id="categories" style="width:20%; height:1000em; float:left;">
+            <ul>
+                <li>@Html.ActionLink(" Main page", "Index", "Home")</li>
+                <li>@Html.ActionLink(" Form", "Form", "Home")</li>
+                <li>@Html.ActionLink(" Guestbook", "Guestbook", "Home")</li>
+            </ul>
+        </div>
+        <div  style="width:80%;display:inline">
+            @RenderBody()
+        </div>
+    </section>
+    <footer>
+        <a href="#top" >&copy; @DateTime.Now.Year - My ASP.NET Application  To top</a>
+    </footer>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+
+</html>
